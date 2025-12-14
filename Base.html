@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Tool</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('Background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+        }
+        
+        h1 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+        
+        .main-layout {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        
+        .inputs-section {
+            flex: 1;
+        }
+        
+        .input-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .input-row label {
+            min-width: 60px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .input-row select {
+            width: 80px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        .input-row input[type="number"] {
+            width: 100px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        .calculation-display {
+            min-width: 100px;
+            padding: 8px;
+            background: #f0f0f0;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .total-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .total-label {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .total-value {
+            font-size: 64px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Spark Chance Calculator</h1>
+        
+        <div class="main-layout">
+            <div class="inputs-section">
+                <div class="input-row">
+                    <label>Parent 1:</label>
+                    <select id="dropdown1" onchange="calculateAll()">
+                        <option value="0.01">1</option>
+                        <option value="0.03">2</option>
+                        <option value="0.05">3</option>
+                    </select>
+                    <input type="number" id="number1" value="0" onchange="calculateAll()" oninput="calculateAll()">
+                    <div class="calculation-display" id="calc1">0.00</div>
+                </div>
+                
+                <div class="input-row">
+                    <label>Parent 2:</label>
+                    <select id="dropdown2" onchange="calculateAll()">
+                        <option value="0.01">1</option>
+                        <option value="0.03">2</option>
+                        <option value="0.05">3</option>
+                    </select>
+                    <input type="number" id="number2" value="0" onchange="calculateAll()" oninput="calculateAll()">
+                    <div class="calculation-display" id="calc2">0.00</div>
+                </div>
+                
+                <div class="input-row">
+                    <label>Grandparent 1:</label>
+                    <select id="dropdown3" onchange="calculateAll()">
+                        <option value="0.01">1</option>
+                        <option value="0.03">2</option>
+                        <option value="0.05">3</option>
+                    </select>
+                    <input type="number" id="number3" value="0" onchange="calculateAll()" oninput="calculateAll()">
+                    <div class="calculation-display" id="calc3">0.00</div>
+                </div>
+                
+                <div class="input-row">
+                    <label>Grandparent 2:</label>
+                    <select id="dropdown4" onchange="calculateAll()">
+                        <option value="0.01">1</option>
+                        <option value="0.03">2</option>
+                        <option value="0.05">3</option>
+                    </select>
+                    <input type="number" id="number4" value="0" onchange="calculateAll()" oninput="calculateAll()">
+                    <div class="calculation-display" id="calc4">0.00</div>
+                </div>
+                
+                <div class="input-row">
+                    <label>Grandparent 3:</label>
+                    <select id="dropdown5" onchange="calculateAll()">
+                        <option value="0.01">1</option>
+                        <option value="0.03">2</option>
+                        <option value="0.05">3</option>
+                    </select>
+                    <input type="number" id="number5" value="0" onchange="calculateAll()" oninput="calculateAll()">
+                    <div class="calculation-display" id="calc5">0.00</div>
+                </div>
+                
+                <div class="input-row">
+                    <label>Grandparent 4:</label>
+                    <select id="dropdown6" onchange="calculateAll()">
+                        <option value="0.01">1</option>
+                        <option value="0.03">2</option>
+                        <option value="0.05">3</option>
+                    </select>
+                    <input type="number" id="number6" value="0" onchange="calculateAll()" oninput="calculateAll()">
+                    <div class="calculation-display" id="calc6">0.00</div>
+                </div>
+            </div>
+            
+            <div class="total-section">
+                <div class="total-label">TOTAL</div>
+                <div class="total-value" id="totalValue">0.00</div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function calculateAll() {
+            let totalMultiplier = 1;
+            
+            for (let i = 1; i <= 6; i++) {
+                const dropdownValue = parseFloat(document.getElementById('dropdown' + i).value);
+                const numberValue = parseFloat(document.getElementById('number' + i).value) || 0;
+                
+                let calculation = dropdownValue * ((100 + numberValue) / 100);
+                
+                // Input 3-6 have half chance
+                if (i >= 3) {
+                    calculation = calculation / 2;
+                }
+                
+                document.getElementById('calc' + i).textContent = calculation.toFixed(4);
+                totalMultiplier *= (1 - calculation);
+            }
+            
+            const total = 1 - totalMultiplier;
+            document.getElementById('totalValue').textContent = total.toFixed(4);
+        }
+        
+        // Initialize on page load
+        calculateAll();
+    </script>
+</body>
+</html>
