@@ -24,7 +24,7 @@
         
         .container {
             max-width: 900px;
-            margin: 0 auto;
+            margin: 0 auto 30px auto;
             background: rgba(255, 255, 255, 0.9);
             padding: 40px;
             border-radius: 10px;
@@ -53,7 +53,7 @@
         }
         
         .input-row label {
-            min-width: 60px;
+            min-width: 110px;
             font-weight: bold;
             color: #333;
         }
@@ -107,87 +107,260 @@
     </style>
 </head>
 <body>
+    <!-- Pink Spark Calculator000000000000000000000000000000000 -->
     <div class="container">
-        <h1>Spark Chance Calculator</h1>
+        <h1>Pink Spark Chance Calculator</h1>
         
         <div class="main-layout">
             <div class="inputs-section">
                 <div class="input-row">
                     <label>Parent 1:</label>
-                    <select id="dropdown1" onchange="calculateAll()">
+                    <select id="dropdown1" onchange="calculatePink()">
                         <option value="0.01">1</option>
                         <option value="0.03">2</option>
                         <option value="0.05">3</option>
                     </select>
-                    <input type="number" id="number1" value="0" onchange="calculateAll()" oninput="calculateAll()">
-                    <div class="calculation-display" id="calc1">0.00</div>
+                    <input type="number" id="number1" value="0" onchange="calculatePink()" oninput="calculatePink()">
+                    <div class="calculation-display" id="calc1">0.0000</div>
                 </div>
                 
                 <div class="input-row">
                     <label>Parent 2:</label>
-                    <select id="dropdown2" onchange="calculateAll()">
+                    <select id="dropdown2" onchange="calculatePink()">
                         <option value="0.01">1</option>
                         <option value="0.03">2</option>
                         <option value="0.05">3</option>
                     </select>
-                    <input type="number" id="number2" value="0" onchange="calculateAll()" oninput="calculateAll()">
-                    <div class="calculation-display" id="calc2">0.00</div>
+                    <input type="number" id="number2" value="0" onchange="calculatePink()" oninput="calculatePink()">
+                    <div class="calculation-display" id="calc2">0.0000</div>
                 </div>
                 
                 <div class="input-row">
                     <label>Grandparent 1:</label>
-                    <select id="dropdown3" onchange="calculateAll()">
+                    <select id="dropdown3" onchange="calculatePink()">
                         <option value="0.01">1</option>
                         <option value="0.03">2</option>
                         <option value="0.05">3</option>
                     </select>
-                    <input type="number" id="number3" value="0" onchange="calculateAll()" oninput="calculateAll()">
-                    <div class="calculation-display" id="calc3">0.00</div>
+                    <input type="number" id="number3" value="0" onchange="calculatePink()" oninput="calculatePink()">
+                    <div class="calculation-display" id="calc3">0.0000</div>
                 </div>
                 
                 <div class="input-row">
                     <label>Grandparent 2:</label>
-                    <select id="dropdown4" onchange="calculateAll()">
+                    <select id="dropdown4" onchange="calculatePink()">
                         <option value="0.01">1</option>
                         <option value="0.03">2</option>
                         <option value="0.05">3</option>
                     </select>
-                    <input type="number" id="number4" value="0" onchange="calculateAll()" oninput="calculateAll()">
-                    <div class="calculation-display" id="calc4">0.00</div>
+                    <input type="number" id="number4" value="0" onchange="calculatePink()" oninput="calculatePink()">
+                    <div class="calculation-display" id="calc4">0.0000</div>
                 </div>
                 
                 <div class="input-row">
                     <label>Grandparent 3:</label>
-                    <select id="dropdown5" onchange="calculateAll()">
+                    <select id="dropdown5" onchange="calculatePink()">
                         <option value="0.01">1</option>
                         <option value="0.03">2</option>
                         <option value="0.05">3</option>
                     </select>
-                    <input type="number" id="number5" value="0" onchange="calculateAll()" oninput="calculateAll()">
-                    <div class="calculation-display" id="calc5">0.00</div>
+                    <input type="number" id="number5" value="0" onchange="calculatePink()" oninput="calculatePink()">
+                    <div class="calculation-display" id="calc5">0.0000</div>
                 </div>
                 
                 <div class="input-row">
                     <label>Grandparent 4:</label>
-                    <select id="dropdown6" onchange="calculateAll()">
+                    <select id="dropdown6" onchange="calculatePink()">
                         <option value="0.01">1</option>
                         <option value="0.03">2</option>
                         <option value="0.05">3</option>
                     </select>
-                    <input type="number" id="number6" value="0" onchange="calculateAll()" oninput="calculateAll()">
-                    <div class="calculation-display" id="calc6">0.00</div>
+                    <input type="number" id="number6" value="0" onchange="calculatePink()" oninput="calculatePink()">
+                    <div class="calculation-display" id="calc6">0.0000</div>
                 </div>
             </div>
             
             <div class="total-section">
                 <div class="total-label">TOTAL</div>
-                <div class="total-value" id="totalValue">0.00</div>
+                <div class="total-value" id="totalValue1">0.0000</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Race Spark Calculator000000000000000000000000000000000000000000000 -->
+    <div class="container">
+        <h1>Race Spark Chance Calculator</h1>
+        
+        <div class="main-layout">
+            <div class="inputs-section">
+                <div class="input-row">
+                    <label>Parent 1:</label>
+                    <select id="dropdown7" onchange="calculateRace()">
+                        <option value="0">0</option>
+                        <option value="0.01">1</option>
+                        <option value="0.02">2</option>
+                        <option value="0.03">3</option>
+                    </select>
+                    <input type="number" id="number7" value="0" onchange="calculateRace()" oninput="calculateRace()">
+                    <div class="calculation-display" id="calc7">0.0000</div>
+                </div>
+                
+                <div class="input-row">
+                    <label>Parent 2:</label>
+                    <select id="dropdown8" onchange="calculateRace()">
+                        <option value="0">0</option>
+                        <option value="0.01">1</option>
+                        <option value="0.02">2</option>
+                        <option value="0.03">3</option>
+                    </select>
+                    <input type="number" id="number8" value="0" onchange="calculateRace()" oninput="calculateRace()">
+                    <div class="calculation-display" id="calc8">0.0000</div>
+                </div>
+                
+                <div class="input-row">
+                    <label>Grandparent 1:</label>
+                    <select id="dropdown9" onchange="calculateRace()">
+                        <option value="0">0</option>
+                        <option value="0.01">1</option>
+                        <option value="0.02">2</option>
+                        <option value="0.03">3</option>
+                    </select>
+                    <input type="number" id="number9" value="0" onchange="calculateRace()" oninput="calculateRace()">
+                    <div class="calculation-display" id="calc9">0.0000</div>
+                </div>
+                
+                <div class="input-row">
+                    <label>Grandparent 2:</label>
+                    <select id="dropdown10" onchange="calculateRace()">
+                        <option value="0">0</option>
+                        <option value="0.01">1</option>
+                        <option value="0.02">2</option>
+                        <option value="0.03">3</option>
+                    </select>
+                    <input type="number" id="number10" value="0" onchange="calculateRace()" oninput="calculateRace()">
+                    <div class="calculation-display" id="calc10">0.0000</div>
+                </div>
+                
+                <div class="input-row">
+                    <label>Grandparent 3:</label>
+                    <select id="dropdown11" onchange="calculateRace()">
+                        <option value="0">0</option>
+                        <option value="0.01">1</option>
+                        <option value="0.02">2</option>
+                        <option value="0.03">3</option>
+                    </select>
+                    <input type="number" id="number11" value="0" onchange="calculateRace()" oninput="calculateRace()">
+                    <div class="calculation-display" id="calc11">0.0000</div>
+                </div>
+                
+                <div class="input-row">
+                    <label>Grandparent 4:</label>
+                    <select id="dropdown12" onchange="calculateRace()">
+                        <option value="0">0</option>
+                        <option value="0.01">1</option>
+                        <option value="0.02">2</option>
+                        <option value="0.03">3</option>
+                    </select>
+                    <input type="number" id="number12" value="0" onchange="calculateRace()" oninput="calculateRace()">
+                    <div class="calculation-display" id="calc12">0.0000</div>
+                </div>
+            </div>
+            
+            <div class="total-section">
+                <div class="total-label">TOTAL</div>
+                <div class="total-value" id="totalValue2">0.0000</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Skill Spark Calculator0000000000000000000000000000000000000 -->
+    <div class="container">
+        <h1>Skill Spark Chance Calculator</h1>
+        
+        <div class="main-layout">
+            <div class="inputs-section">
+                <div class="input-row">
+                    <label>Parent 1:</label>
+                    <select id="dropdown13" onchange="calculateSkill()">
+                        <option value="0">0</option>
+                        <option value="0.03">1</option>
+                        <option value="0.06">2</option>
+                        <option value="0.09">3</option>
+                    </select>
+                    <input type="number" id="number13" value="0" onchange="calculateSkill()" oninput="calculateSkill()">
+                    <div class="calculation-display" id="calc13">0.0000</div>
+                </div>
+                
+                <div class="input-row">
+                    <label>Parent 2:</label>
+                    <select id="dropdown14" onchange="calculateSkill()">
+                        <option value="0">0</option>
+                        <option value="0.03">1</option>
+                        <option value="0.06">2</option>
+                        <option value="0.09">3</option>
+                    </select>
+                    <input type="number" id="number14" value="0" onchange="calculateSkill()" oninput="calculateSkill()">
+                    <div class="calculation-display" id="calc14">0.0000</div>
+                </div>
+                
+                <div class="input-row">
+                    <label>Grandparent 1:</label>
+                    <select id="dropdown15" onchange="calculateSkill()">
+                        <option value="0">0</option>
+                        <option value="0.03">1</option>
+                        <option value="0.06">2</option>
+                        <option value="0.09">3</option>
+                    </select>
+                    <input type="number" id="number15" value="0" onchange="calculateSkill()" oninput="calculateSkill()">
+                    <div class="calculation-display" id="calc15">0.0000</div>
+                </div>
+                
+                <div class="input-row">
+                    <label>Grandparent 2:</label>
+                    <select id="dropdown16" onchange="calculateSkill()">
+                        <option value="0">0</option>
+                        <option value="0.03">1</option>
+                        <option value="0.06">2</option>
+                        <option value="0.09">3</option>
+                    </select>
+                    <input type="number" id="number16" value="0" onchange="calculateSkill()" oninput="calculateSkill()">
+                    <div class="calculation-display" id="calc16">0.0000</div>
+                </div>
+                
+                <div class="input-row">
+                    <label>Grandparent 3:</label>
+                    <select id="dropdown17" onchange="calculateSkill()">
+                        <option value="0">0</option>
+                        <option value="0.03">1</option>
+                        <option value="0.06">2</option>
+                        <option value="0.09">3</option>
+                    </select>
+                    <input type="number" id="number17" value="0" onchange="calculateSkill()" oninput="calculateSkill()">
+                    <div class="calculation-display" id="calc17">0.0000</div>
+                </div>
+                
+                <div class="input-row">
+                    <label>Grandparent 4:</label>
+                    <select id="dropdown18" onchange="calculateSkill()">
+                        <option value="0">0</option>
+                        <option value="0.03">1</option>
+                        <option value="0.06">2</option>
+                        <option value="0.09">3</option>
+                    </select>
+                    <input type="number" id="number18" value="0" onchange="calculateSkill()" oninput="calculateSkill()">
+                    <div class="calculation-display" id="calc18">0.0000</div>
+                </div>
+            </div>
+            
+            <div class="total-section">
+                <div class="total-label">TOTAL</div>
+                <div class="total-value" id="totalValue3">0.0000</div>
             </div>
         </div>
     </div>
     
     <script>
-        function calculateAll() {
+        function calculatePink() {
             let totalMultiplier = 1;
             
             for (let i = 1; i <= 6; i++) {
@@ -196,7 +369,6 @@
                 
                 let calculation = dropdownValue * ((100 + numberValue) / 100);
                 
-                // Input 3-6 have half chance
                 if (i >= 3) {
                     calculation = calculation / 2;
                 }
@@ -206,11 +378,54 @@
             }
             
             const total = 1 - totalMultiplier;
-            document.getElementById('totalValue').textContent = total.toFixed(4);
+            document.getElementById('totalValue1').textContent = total.toFixed(4);
         }
         
-        // Initialize on page load
-        calculateAll();
+        function calculateRace() {
+            let totalMultiplier = 1;
+            
+            for (let i = 7; i <= 12; i++) {
+                const dropdownValue = parseFloat(document.getElementById('dropdown' + i).value);
+                const numberValue = parseFloat(document.getElementById('number' + i).value) || 0;
+                
+                let calculation = dropdownValue * ((100 + numberValue) / 100);
+                
+                if (i >= 9) {
+                    calculation = calculation / 2;
+                }
+                
+                document.getElementById('calc' + i).textContent = calculation.toFixed(4);
+                totalMultiplier *= (1 - calculation);
+            }
+            
+            const total = 1 - totalMultiplier;
+            document.getElementById('totalValue2').textContent = total.toFixed(4);
+        }
+        
+        function calculateSkill() {
+            let totalMultiplier = 1;
+            
+            for (let i = 13; i <= 18; i++) {
+                const dropdownValue = parseFloat(document.getElementById('dropdown' + i).value);
+                const numberValue = parseFloat(document.getElementById('number' + i).value) || 0;
+                
+                let calculation = dropdownValue * ((100 + numberValue) / 100);
+                
+                if (i >= 15) {
+                    calculation = calculation / 2;
+                }
+                
+                document.getElementById('calc' + i).textContent = calculation.toFixed(4);
+                totalMultiplier *= (1 - calculation);
+            }
+            
+            const total = 1 - totalMultiplier;
+            document.getElementById('totalValue3').textContent = total.toFixed(4);
+        }
+        
+        calculatePink();
+        calculateRace();
+        calculateSkill();
     </script>
 </body>
 </html>
