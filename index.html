@@ -45,6 +45,30 @@
             flex: 1;
         }
         
+        .header-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+            padding-left: 125px;
+        }
+        
+        .header-row .header-label {
+            font-weight: bold;
+            color: #555;
+            font-size: 13px;
+        }
+        
+        .header-row .spark-header {
+            width: 80px;
+            text-align: center;
+        }
+        
+        .header-row .affinity-header {
+            width: 100px;
+            text-align: center;
+        }
+        
         .input-row {
             display: flex;
             align-items: center;
@@ -107,15 +131,21 @@
     </style>
 </head>
 <body>
-    <!-- Pink Spark Calculator000000000000000000000000000000000 -->
+    <!-- Pink Spark Calculator00000000000000000000000000000000000000000000000 -->
     <div class="container">
         <h1>Pink Spark Chance Calculator</h1>
         
         <div class="main-layout">
             <div class="inputs-section">
+                <div class="header-row">
+                    <div class="header-label spark-header">Spark Star</div>
+                    <div class="header-label affinity-header">Affinity</div>
+                </div>
+                
                 <div class="input-row">
                     <label>Parent 1:</label>
                     <select id="dropdown1" onchange="calculatePink()">
+                        <option value="0">0</option>
                         <option value="0.01">1</option>
                         <option value="0.03">2</option>
                         <option value="0.05">3</option>
@@ -127,6 +157,7 @@
                 <div class="input-row">
                     <label>Parent 2:</label>
                     <select id="dropdown2" onchange="calculatePink()">
+                        <option value="0">0</option>
                         <option value="0.01">1</option>
                         <option value="0.03">2</option>
                         <option value="0.05">3</option>
@@ -138,6 +169,7 @@
                 <div class="input-row">
                     <label>Grandparent 1:</label>
                     <select id="dropdown3" onchange="calculatePink()">
+                        <option value="0">0</option>
                         <option value="0.01">1</option>
                         <option value="0.03">2</option>
                         <option value="0.05">3</option>
@@ -149,6 +181,7 @@
                 <div class="input-row">
                     <label>Grandparent 2:</label>
                     <select id="dropdown4" onchange="calculatePink()">
+                        <option value="0">0</option>
                         <option value="0.01">1</option>
                         <option value="0.03">2</option>
                         <option value="0.05">3</option>
@@ -160,6 +193,7 @@
                 <div class="input-row">
                     <label>Grandparent 3:</label>
                     <select id="dropdown5" onchange="calculatePink()">
+                        <option value="0">0</option>
                         <option value="0.01">1</option>
                         <option value="0.03">2</option>
                         <option value="0.05">3</option>
@@ -171,6 +205,7 @@
                 <div class="input-row">
                     <label>Grandparent 4:</label>
                     <select id="dropdown6" onchange="calculatePink()">
+                        <option value="0">0</option>
                         <option value="0.01">1</option>
                         <option value="0.03">2</option>
                         <option value="0.05">3</option>
@@ -187,12 +222,17 @@
         </div>
     </div>
     
-    <!-- Race Spark Calculator000000000000000000000000000000000000000000000 -->
+    <!-- Race Spark Calculator00000000000000000000000000000000000000000000000 -->
     <div class="container">
         <h1>Race Spark Chance Calculator</h1>
         
         <div class="main-layout">
             <div class="inputs-section">
+                <div class="header-row">
+                    <div class="header-label spark-header">Spark Star</div>
+                    <div class="header-label affinity-header">Affinity</div>
+                </div>
+                
                 <div class="input-row">
                     <label>Parent 1:</label>
                     <select id="dropdown7" onchange="calculateRace()">
@@ -273,12 +313,17 @@
         </div>
     </div>
     
-    <!-- Skill Spark Calculator0000000000000000000000000000000000000 -->
+    <!-- Skill Spark Calculator000000000000000000000000000000000000000000000000000000 -->
     <div class="container">
         <h1>Skill Spark Chance Calculator</h1>
         
         <div class="main-layout">
             <div class="inputs-section">
+                <div class="header-row">
+                    <div class="header-label spark-header">Spark Star</div>
+                    <div class="header-label affinity-header">Affinity</div>
+                </div>
+                
                 <div class="input-row">
                     <label>Parent 1:</label>
                     <select id="dropdown13" onchange="calculateSkill()">
